@@ -1,6 +1,9 @@
 // http://ionicframework.com/docs/v2/theming/
 
-
+ion-app._gmaps_cdv_ .nav-decor{
+  background-color: transparent!important;
+  display:none!important;
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
