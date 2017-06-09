@@ -14,6 +14,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import {HttpModule} from "@angular/http";
 import {DetailsPage} from "../pages/details/details";
 import {Map2Page} from "../pages/map2/map2";
+import {LoginPage} from "../pages/login/login";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {Map2Page} from "../pages/map2/map2";
     HomePage,
     TabsPage,
     DetailsPage,
-    Map2Page
+    Map2Page,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {Map2Page} from "../pages/map2/map2";
     HomePage,
     TabsPage,
     DetailsPage,
-    Map2Page
+    Map2Page,
+    LoginPage
   ],
   providers: [
     StatusBar,
