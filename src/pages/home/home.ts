@@ -1,7 +1,8 @@
 import { Component, ElementRef,ViewChild} from '@angular/core';
-import {NavController, Platform} from 'ionic-angular';
+import {MenuController, NavController, Platform} from 'ionic-angular';
 import {Geolocation, Geoposition} from '@ionic-native/geolocation'
 import {DetailsPage} from "../details/details";
+import {LoginPage} from "../login/login";
 
 declare var plugin: any;
 declare var cordova: any;
@@ -14,7 +15,8 @@ export class HomePage {
 
   @ViewChild('map') theMap: ElementRef;
   map: any;
-  constructor(public navCtrl: NavController, public platform: Platform,public geolocation : Geolocation) {
+  constructor(public navCtrl: NavController, public platform: Platform,public geolocation : Geolocation,
+  public menuCtrl : MenuController) {
     platform.ready().then(() => {
 
       this.loadMap();
@@ -70,6 +72,13 @@ getNextPage(){
     console.log('Start loading MAP');
 
 
+  }
+
+  getLoginPage(){
+     this.navCtrl.push(LoginPage);
+  }
+  toggleMenu() {
+    this.menuCtrl.toggle();
   }
 
 }
